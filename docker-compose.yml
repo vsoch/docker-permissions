@@ -1,0 +1,10 @@
+# docker-compose up -d
+
+version: "3"
+services:
+  permissions:
+    build: .
+    command: tail -F dont-stop-believing
+    working_dir: /opt/files
+    volumes:
+      - ./files:/opt/files
